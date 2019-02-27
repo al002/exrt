@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["al002"]
   spec.email         = ["al002@disroot.org"]
 
-  spec.summary       = "exchange rate library and command line tool"
+  spec.summary       = "exchange rate library"
   spec.homepage      = "https://github.com/al002/exrt"
 
   # Specify which files should be added to the gem when it is released.
@@ -19,9 +19,9 @@ Gem::Specification.new do |spec|
   end
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
-  spec.require_paths = ["lib"]
+  spec.require_paths = ["lib", "~/workspace/exrt/lib"]
 
-  spec.add_dependency "thor", "~> 0.20"
+  spec.add_dependency "faraday", "~> 0.15"
 
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", "~> 10.0"
