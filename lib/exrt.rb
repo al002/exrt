@@ -2,7 +2,7 @@ require "exrt/version"
 require "exrt/http"
 
 module Exrt
-  class Exrt
+  class Rate
     def self.latest(base: "USD", symbols: [])
       response = Http.get("/latest", { base: base, symbols: symbols_str(symbols) })
       response.body
